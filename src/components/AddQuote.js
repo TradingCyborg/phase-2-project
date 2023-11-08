@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AllQuotes from './AllQuotes';
 import axios from 'axios';
 
 function AddQuote() {
