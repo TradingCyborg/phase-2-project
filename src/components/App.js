@@ -9,12 +9,10 @@ import SingleQuote from './SingleQuote';
 function App() {
   return (
     <Router>
-      <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/all-quotes" exact component={AllQuotes} />
         <Route path="/add-quote" component={AddQuote} />
         <Route path="/quote/:id" component={SingleQuote} />   
-      </Switch>
     </Router>
   );
 }
