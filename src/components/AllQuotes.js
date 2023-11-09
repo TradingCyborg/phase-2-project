@@ -18,6 +18,9 @@ function AllQuotes() {
       <Navbar/>
 
       <div class="container mt-5">
+        <div class='row justify-content-end'>
+          <div class='col-8'></div>
+        <div class='col-4'>  <a href='/add-quote' class="btn-md mb-4 btn-primary btn">Add Quote</a></div></div>
       <h2 class="mb-3">All Quotes</h2>
       <ul class="list-group">
     

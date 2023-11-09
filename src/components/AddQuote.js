@@ -17,7 +17,7 @@ function AddQuote() {
     };
 
     // Post the new quote to the JSON server
-    axios.post('http://localhost:5000/quotes', newQuote)
+    axios.post('http://localhost:3000/quotes', newQuote)
       .then(response => {
         console.log('Quote added:', response.data);
         // Reset the form fields
@@ -30,7 +30,9 @@ function AddQuote() {
   return (
     <div> 
       <Navbar />
-      <h1 className="text-center">Add Quote</h1>
+      <div class="row justify-content-center">
+          <div class="col-8">
+          <h1 className="text-center mt-4">Add Quote</h1>
       <h2>Add a Quote</h2>
 
       <form onSubmit={handleSubmit}>
@@ -56,6 +58,9 @@ function AddQuote() {
         </div>
         <button class="btn-primary btn-md btn" type="submit">Add Quote</button>
       </form>
+          </div>
+      </div>
+      
     </div>
   );
 }
