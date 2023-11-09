@@ -4,6 +4,8 @@ import Home from './Home';
 import AllQuotes from './AllQuotes';
 import AddQuote from './AddQuote';
 import SingleQuote from './SingleQuote';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 function App() {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from './Navbar';
 import AllQuotes from './AllQuotes';
 import axios from 'axios';
 
@@ -27,28 +28,33 @@ function AddQuote() {
   };
 
   return (
-    <div>
+    <div> 
+      <Navbar />
+      <h1 className="text-center">Add Quote</h1>
       <h2>Add a Quote</h2>
+
       <form onSubmit={handleSubmit}>
-        <div>
+        <div class="form-group mb-3">
           <label>Quote:</label>
           <input
+            class="form-control"
             type="text"
             value={quoteText}
             onChange={e => setQuoteText(e.target.value)}
             required
           />
         </div>
-        <div>
+        <div class="form-group mb-3">
           <label>Author:</label>
           <input
+            class="form-control"
             type="text"
             value={author}
             onChange={e => setAuthor(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Add Quote</button>
+        <button class="btn-primary btn-md btn" type="submit">Add Quote</button>
       </form>
     </div>
   );
