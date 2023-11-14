@@ -6,6 +6,25 @@ import reportWebVitals from './reportWebVitals';
 
 const root = createRoot(document.getElementById('root'));
 
+function fetchAndDisplayQuotes() {
+  const url = 'https://type.fit/api/quotes';
+  
+   fetch(url)
+      .then((response) => {
+          console.log(response)
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then((data) => {
+          displayQuotes(data);
+      })
+      .catch((error) => {
+          console.error('Error fetching quotes:', error);
+      });
+}
+
 root.render(
   <React.StrictMode>
     <App />
