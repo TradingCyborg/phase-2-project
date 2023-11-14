@@ -7,7 +7,7 @@ function Home() {
     const [quote, setQuote] = useState({});
   
     useEffect(() => {
-      axios.get('http://localhost:3000/quotes')
+      axios.get('https://type.fit/api/quotes')
         .then(response => {
           const randomIndex = Math.floor(Math.random() * response.data.length);
           setQuote(response.data[randomIndex]);
@@ -17,7 +17,7 @@ function Home() {
 
 
   function generateQuote(){
-    axios.get('http://localhost:3000/quotes')
+    axios.get('https://type.fit/api/quotes')
         .then(response => {
           const randomIndex = Math.floor(Math.random() * response.data.length);
           setQuote(response.data[randomIndex]);
