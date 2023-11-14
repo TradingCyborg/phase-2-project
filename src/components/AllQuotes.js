@@ -6,7 +6,7 @@ function AllQuotes() {
   const [quotes, setQuotes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/quotes')
+    axios.get('https://type.fit/api/quotes')
       .then(response => {
         setQuotes(response.data);
       })

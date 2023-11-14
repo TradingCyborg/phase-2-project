@@ -17,7 +17,7 @@ function AddQuote() {
     };
 
     // Post the new quote to the JSON server
-    axios.post('http://localhost:3000/quotes', newQuote)
+    axios.post('https://type.fit/api/quotes', newQuote)
       .then(response => {
         console.log('Quote added:', response.data);
         // Reset the form fields

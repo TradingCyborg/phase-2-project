@@ -7,7 +7,7 @@ function SingleQuote() {
   const [quote, setQuote] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/quotes/${id}`)
+    axios.get(`https://type.fit/api/quotes/${id}`)
       .then(response => {
         setQuote(response.data);
       })

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import AllQuotes from './AllQuotes';
@@ -9,6 +9,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 function App() {
+  const url = "https://type.fit/api/quotes";
+  const [data, setData] = useState([]);
+
+  const fetchInfo = () => {
+    return fetch(url)
+    .then((res) => res.json())
+    .then((d) => setData(d))
+  }
+  useEffect(()=>{fetchInfo()},[]);
+  
   return (
     <Router>
       <Routes>
