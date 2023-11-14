@@ -17,7 +17,7 @@ function App() {
     .then((res) => res.json())
     .then((d) => setData(d))
   }
-  useEffect(()=>{fetchInfo()},[]);
+  useEffect(()=>{fetchInfo()},[])
   
   return (
     <Router>
